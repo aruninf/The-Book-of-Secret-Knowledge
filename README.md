@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  🌐 <a href="https://aruninf.github.io/The-Book-of-Secret-Knowledge-/">Browse the best-of web version</a>
+  🌐 <a href="https://aruninf.github.io/The-Book-of-Secret-Knowledge/">Browse the best-of web version</a>
 </p>
 
 <br>
