@@ -131,12 +131,43 @@ mark.hl {
   background: rgba(255, 255, 255, 0.88);
 }
 
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   color: var(--text-heading);
+}
+
+.brand-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.brand-author:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.brand-author strong {
+  color: var(--text-heading);
+  font-weight: 700;
 }
 
 .mark {
@@ -350,6 +381,45 @@ mark.hl {
   font-weight: 600;
   margin-bottom: 16px;
   letter-spacing: 0.02em;
+}
+
+.hero-author-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-author-link:hover {
+  opacity: 0.85;
+}
+
+.inline-author-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn-author {
+  background: var(--accent-subtle);
+  border-color: rgba(45, 212, 191, 0.35);
+  color: var(--accent);
+}
+
+.btn-author:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.footer-author-link {
+  color: var(--text-heading);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-author-link:hover {
+  color: var(--accent);
 }
 
 .hero h1 {
@@ -1507,6 +1577,9 @@ footer {
     display: none;
   }
   .brandtag {
+    display: none;
+  }
+  .brand-author {
     display: none;
   }
   .navsearch {

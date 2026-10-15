@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { CATEGORIES, ITEMS, ALL_TAGS, byId } from './data.js'
 
 const REPO_URL = 'https://github.com/aruninf/The-Book-of-Secret-Knowledge'
+const PROFILE_URL = 'https://github.com/aruninf'
 
 function highlightMatch(text, query) {
   if (!query || !text) return text
@@ -217,13 +218,25 @@ export default function App() {
 
       {/* Sticky Navigation */}
       <nav className="topnav">
-        <a className="brand" href="#top">
-          <span className="mark" aria-hidden="true">
-            <BookIcon />
-          </span>
-          <span className="brandname">Secret Knowledge</span>
-          <span className="brandtag">Best-of</span>
-        </a>
+        <div className="brand-group">
+          <a className="brand" href="#top">
+            <span className="mark" aria-hidden="true">
+              <BookIcon />
+            </span>
+            <span className="brandname">Secret Knowledge</span>
+            <span className="brandtag">Best-of</span>
+          </a>
+          <a
+            className="brand-author"
+            href={PROFILE_URL}
+            target="_blank"
+            rel="noreferrer"
+            title="Curated by @aruninf on GitHub"
+          >
+            <span>by</span>
+            <strong>@aruninf</strong>
+          </a>
+        </div>
 
         <div className="navsearch">
           <SearchIcon />
@@ -282,7 +295,13 @@ export default function App() {
       <header className="hero" id="top">
         <div className="hero-badge">
           <span className="hero-sparkle">✨</span>
-          <span>Maintainer-Curated Best-Of Navigator</span>
+          <span>
+            Curated by{' '}
+            <a href={PROFILE_URL} target="_blank" rel="noreferrer" className="hero-author-link">
+              @aruninf
+            </a>{' '}
+            · The Book of Secret Knowledge
+          </span>
         </div>
         <h1>
           The tools worth knowing,<br />
@@ -633,12 +652,19 @@ export default function App() {
           <p>
             The Book of Secret Knowledge is an invaluable hoard for terminal dwellers, sysadmins,
             and security pros — but raw markdown lists can be overwhelming to scan.
-            This viewer serves actionable knowledge: practical copyable commands, real-world
+            Maintained and crafted with care by{' '}
+            <a href={PROFILE_URL} target="_blank" rel="noreferrer" className="inline-author-link">
+              <strong>@aruninf</strong>
+            </a>
+            , this viewer serves actionable knowledge: practical copyable commands, real-world
             use cases, tags, and quick-filter tools so you can learn fast without losing your place.
           </p>
           <div className="about-links">
             <a href={REPO_URL} target="_blank" rel="noreferrer" className="btn btn-sm">
               <GithubIcon /> Star Repo on GitHub
+            </a>
+            <a href={PROFILE_URL} target="_blank" rel="noreferrer" className="btn btn-sm btn-author">
+              <GithubIcon /> Follow @aruninf
             </a>
             <button className="btn btn-sm" onClick={() => copyText(window.location.href, 'Page link copied!')}>
               <ShareIcon /> Share Best-of App
@@ -651,7 +677,11 @@ export default function App() {
       <footer>
         <div className="footer-left">
           <span>
-            Curated web viewer for{' '}
+            Curated with ⚡ by{' '}
+            <a href={PROFILE_URL} target="_blank" rel="noreferrer" className="footer-author-link">
+              <strong>@aruninf</strong>
+            </a>{' '}
+            • Forked from{' '}
             <a href={REPO_URL} target="_blank" rel="noreferrer">
               the-book-of-secret-knowledge
             </a>{' '}
