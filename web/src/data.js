@@ -5,15 +5,16 @@ export const CATEGORIES = [
     id: 'start',
     title: 'Start here',
     blurb: 'New to the book? These six teach you the fastest habits.',
+    accent: '#5eead4',
     picks: ['tldr', 'explainshell', 'shellcheck', 'fzf', 'httpie', 'ssllabs-test'],
   },
-  { id: 'cli', title: 'CLI essentials', blurb: 'Shell, prompt, multiplexer, finder.' },
-  { id: 'network', title: 'Network', blurb: 'Scan it, capture it, debug it.' },
-  { id: 'ssl', title: 'SSL & security', blurb: 'Check TLS before your users do.' },
-  { id: 'web', title: 'Web tools', blurb: 'Headers, DNS, speed — paste a URL, get answers.' },
-  { id: 'sys', title: 'Systems & logs', blurb: 'What is the machine doing right now?' },
-  { id: 'containers', title: 'Containers', blurb: 'Lint the Dockerfile, learn K8s the hard way.' },
-  { id: 'pentest', title: 'Pentest & recon', blurb: 'Subdomains, devices, certs exposed on the internet.' },
+  { id: 'cli', title: 'CLI essentials', blurb: 'Shell, prompt, multiplexer, finder.', accent: '#7dd3fc' },
+  { id: 'network', title: 'Network', blurb: 'Scan it, capture it, debug it.', accent: '#93c5fd' },
+  { id: 'ssl', title: 'SSL & security', blurb: 'Check TLS before your users do.', accent: '#6ee7b7' },
+  { id: 'web', title: 'Web tools', blurb: 'Headers, DNS, speed — paste a URL, get answers.', accent: '#c4b5fd' },
+  { id: 'sys', title: 'Systems & logs', blurb: 'What is the machine doing right now?', accent: '#fcd34d' },
+  { id: 'containers', title: 'Containers', blurb: 'Lint the Dockerfile, learn K8s the hard way.', accent: '#67e8f9' },
+  { id: 'pentest', title: 'Pentest & recon', blurb: 'Subdomains, devices, certs exposed on the internet.', accent: '#fca5a5' },
 ]
 
 export const ITEMS = [
